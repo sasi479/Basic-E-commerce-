@@ -1,0 +1,31 @@
+.userList{
+    display: flex;
+    gap: 15px;
+    /* justify-content: center; */
+}
+
+
+
+.userCard{
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.2);
+    width: 200px;
+}
+form{
+   display:flex;
+   flex-direction: column; 
+    gap:10px;
+    padding:20px;
+    border: 2px solid black;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+.formgroup{
+    display: flex;
+    gap:10px;
+}
+form label{
+    width: 70px;
+}
