@@ -10,7 +10,7 @@ export default function Login() {
     let { userDetails, setUserDetails } = useContext(AppContext);
     let [formData, setFormdata] = useState({ username: "", password: "" });
     
-    const { error, loading, fetchData } = useFetch('${baseURL}/login', {}, false);
+    const { error, loading, fetchData } = useFetch(`${baseURL}/login`, {}, false);
 
 
     let navigate = useNavigate();
