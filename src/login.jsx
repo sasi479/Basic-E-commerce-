@@ -3,13 +3,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import './signup-login.css'
 import { AppContext } from "./AppContext";
 import useFetch from "./useFetch";
+const baseURL= import.meta.env.VITE_API_BASE_URL
 
 export default function Login() {
 
     let { userDetails, setUserDetails } = useContext(AppContext);
     let [formData, setFormdata] = useState({ username: "", password: "" });
     
-    const { error, loading, fetchData } = useFetch('http://localhost:5000/login', {}, false);
+    const { error, loading, fetchData } = useFetch('${baseURL}/login', {}, false);
 
 
     let navigate = useNavigate();

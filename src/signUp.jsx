@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signup-login.css'
-
+const baseURL= import.meta.env.VITE_API_BASE_URL
 export default function SignUp() {
 
     let [formData, setFormdata] = useState({ username: "", email: "", password: "" });
@@ -15,7 +15,7 @@ export default function SignUp() {
         setSuccess(false)
         setError("")
         try {
-            let res = await fetch('http://localhost:5000/register', {
+            let res = await fetch(`${baseURL}/register`, {
                 method: "POST",
                 body: JSON.stringify(formData),
                 headers: {
