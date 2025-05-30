@@ -8,9 +8,10 @@ import useFetch from "./useFetch";
 
 export default function ProductDetails() {
     let { id } = useParams();
+    console.log(id)
     // let [product, setProduct] = useState({})
     let { cart, addToCart, updateCart, deleteCart } = useContext(AppContext);
-  const {error,loading,data:product}=  useFetch(`https://fakestoreapi.com/products/${id}`,{});
+  const {error,loading,data:product}=  useFetch(`https://fakestoreapi.com/products/${id}`,{},true);
 
     // let [loading, setLoading] = useState(true)
     // let [error, setError] = useState(null)
